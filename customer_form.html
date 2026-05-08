@@ -392,7 +392,7 @@ document.getElementById('transferBtn').addEventListener('click', () => {
   localStorage.setItem('itHeroesCustomerData', JSON.stringify(data));
 
   const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
-  window.open(`${TECHNICIAN_URL}?data=${encoded}`, '_blank');
+  window.open(`${TECHNICIAN_URL}?data=${encodeURIComponent(encoded)}`, '_blank');
 });
 
 // Share via WhatsApp
